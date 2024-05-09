@@ -1,6 +1,6 @@
 // # Data Types  Primitive data types are also known as in-built data typutilityes.
 
-// 1.built in type -> number, string, boolean, void, undefined, null, object, symbol
+// 1.built in type -> number, string, boolean, void, undefined, null, symbol.
 // ---------------------------------------------------------------------------------
 let userName: string;
 let userId: number;
@@ -46,9 +46,6 @@ Teacher: [12, "anis"];
 // enum data types - - > In TypeScript, an enum (short for enumeration) is a data type that allows you to define a set of named
 // constants. Enums are useful when you have a fixed set of values that a variable can take, such as days of the week, months of
 // the year, or states of an object.
-
-// An enum, short for "enumeration," is a data type in TypeScript used to define a set of named constants. Enums make it easier to work
-// with a group of related values, providing meaningful names for each value
 
 // enum types : numeric, string, hetergenous
 // numeric enum
@@ -97,11 +94,6 @@ console.log(Month.December); // Output: 12
 //                    which helps improve code readability, maintainability, and reusability.
 //                    ** so, kono akta object ar properties gular  type define kore dei interface.
 
-//                     note:
-//                     type alias and interface 2tai same kaj kore but kisu different ase seta hoilo, interface a primitive data define
-//                     kora jaina, kintu type alias ar khetre primitive data type define kora jai.
-//                     so, sokol primitve and object ar khete alias type use kora parbo & sudu matro object type define ar jonno interface
-
 //                    Interface: Interface হলো Type Alias এর মতোই টাইপ ডিফাইন করার একটি পদ্ধতি যেটার মাধ্যমে শুধুমাত্র non primitive Type
 //                    এর স্ট্রাকচার ডিফাইন করা হয়।
 //                    Interface vs Type Alias: Interface দ্বারা শুধুমাত্র non primitive টাইপ ডিফাইন করা যায় আর Type Alias দ্বারা primitive
@@ -141,7 +133,7 @@ class SenoiorTeacher {
     this.age = age;
   }
 
-  // create function
+  // create function / method
   display(): void {
     console.log(`${this.userName} ${this.age}`);
   }
@@ -369,7 +361,7 @@ const resGen = createArrayWithGeneric<UserInfos>({ name: "a", age: 20 });
 let myData; // this type guess any type
 let loverName = "sumon.dev"; // this type guess string
 let loverAge = 2; // this type guess number
-let favNum: 5 = 5; // specific number you can create type
+let favNum: 5 = 5; // specific number you can create type  ====> it is literal type.
 
 // # Literal type : when i give not type rather we give value as a type that time you have use this value otherwise i got an error
 let boysData: "love pro" | 20 = 20;
@@ -395,7 +387,7 @@ function throwError(message: string): never {
   throw new Error(message);
 }
 
-// # tsc config : its handle to multiple ts file
+// # tsc config : its handle to multiple ts file based on folder structure.
 // > tsc -init > enter
 
 // # alias type : is a custom type we created own way, for reuse to reduce repated code. have to use keyword type.
@@ -756,7 +748,7 @@ type sheikh = {
 
 // car ase kina, bike ase kina, ship ase kina,
 
-// # utility type : Pick, Omit
+// # utility type : Pick, Omit, Partial, readonly, Required, Record
 
 type PersonInfo = {
   name: "anisur rahman";
