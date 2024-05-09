@@ -18,7 +18,7 @@ Code is well managed
 Its increase security, scalability,  readability and code quality 
 It adds a static type to js so that we can handle errors at compile time before running the program.
 It can be used both on the client and server side.
-Intellisense IDE( integrated development environment ) support system: while coding: code completion.
+TypeScript offers better IDE support with features like code completion, type checking, and refactoring tools.
 
 
 Nvm - node version manager ? - - for switching node version deprecated to latest
