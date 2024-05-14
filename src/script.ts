@@ -1,4 +1,4 @@
-// # Data Types  Primitive data types are also known as in-built data typutilityes.
+// Primitive data types are also known as in-built data type.
 
 // 1.built in type -> number, string, boolean, void, undefined, null, symbol.
 // ---------------------------------------------------------------------------------
