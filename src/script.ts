@@ -14,14 +14,6 @@ isActivated = true;
 
 let myBoss: (name: string, age: number) => void; // not give a return value
 
-myBoss = (name, age) => {
-  console.log(`${name} ${age} i want to prepare for job `);
-};
-
-function studentInfo(userId: string | number) {
-  console.log(userId);
-}
-
 // 2.user define type -> arrays, enums, classes, interfaces, union, tuple, intersection, void etc.
 // -----------------------------------------------------------------------------------------------
 
