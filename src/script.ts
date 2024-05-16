@@ -14,7 +14,7 @@ isActivated = true;
 
 let myBoss: (name: string, age: number) => void; // not give a return value
 
-// 2.user define type -> arrays, enums, classes, interfaces, union, tuple, intersection, void etc.
+// 2.user define type -> arrays, enums, classes, interfaces, union, tuple, intersection etc. ( active u )
 // -----------------------------------------------------------------------------------------------
 
 // # union types > you can give more than type.
@@ -359,9 +359,6 @@ let favNum: 5 = 5; // specific number you can create type  ====> it is literal t
 let boysData: "love pro" | 20 = 20;
 let company: "phero" = "phero";
 
-let status: "success" | "error";
-status = "success"; // OK
-status = "error"; // OK
 // Error: Type '"pending"' is not assignable to type '"success" | "error"'.
 
 let score: 0 | 1 | 2 | 3 | 4 | 5;
@@ -378,6 +375,9 @@ function showMessage(message: string): void {
 function throwError(message: string): never {
   throw new Error(message);
 }
+
+// note : while both "void" and "never" types indicate the absence of a value, "void" specifically denotes functions that do not
+//        return anything, while "never" indicates values or functions that never occur or never return normally.
 
 // # tsc config : its handle to multiple ts file based on folder structure.
 // > tsc -init > enter
@@ -427,36 +427,13 @@ interface Dog extends Animal {
 type Example1 = Dog extends Animal ? number : string;
 type Example2 = RegExp extends Animal ? number : string;
 
-// # utility type : exclude, Partial, Pick, readOnly, Omit.
-export interface studentInfos {
-  first_name: string;
-  last_name: string;
-  readonly id: number;
-  role: "admin" | "user";
-}
-
-const updateStudentInfos1 = (user: Partial<studentInfos>) => {}; // here is partial use for all properties update permission
-const firstName = (user: Pick<studentInfos, "first_name" | "last_name">) => {}; // here is pick use for create one different type
-type person = Omit<studentInfos, "role">; // here is role bade bakigula thakbe this  person type ar modde
-
-updateStudentInfos1({ first_name: "sumon devCoder" });
-
-// readonly
-interface Todo {
-  title: string;
-}
-
-const todo: Readonly<Todo> = {
-  title: "Delete inactive users",
-};
-
 // # object and optional type : type by default will  be required so we can use "?" this symbol for making optionl type
 const teacherName: {
   companyName: "phero compnay"; // literal type
   readonly positionType: "mern developer";
   fistName: string;
   middleName?: string; // optional type
-  lastName?: string;
+  lastName?: string; // optional type
 } = {
   fistName: "jhankhar mahbub 222",
   companyName: "phero compnay",
