@@ -1,5 +1,9 @@
 // Primitive data types are also known as in-built data type.
 
+// A primitive data type is a basic type of data built into a programming language.
+//  These types represent single values and are not composed of other objects or collections.
+//  They are the most fundamental data types and serve as the building blocks for data manipulation in programs.
+
 // 1.built in type -> number, string, boolean, void, undefined, null, symbol.
 // ---------------------------------------------------------------------------------
 let userName: string;
